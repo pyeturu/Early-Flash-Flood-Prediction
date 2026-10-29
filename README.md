@@ -11,6 +11,14 @@ Team Members
 
 Repository: https://github.com/pyeturu/Early-Flash-Flood-Prediction
 
+Folder documentation
+
+- [Raw data](data/raw/README.md): source files, basin details, and where the data comes from.
+- [Processed data](data/processed/README.md): selected columns and how the combined table is made.
+- [Results](results/README.md): the analysis workflow and the outputs currently available.
+- [Analysis and training outputs](results/staged/README.md): statistics, missing values, sample counts, and expected prediction output.
+- [Figures](results/staged/figures/README.md): what each plot shows and how to regenerate it.
+
 We use a three-basin CAMELS-US subset of the Caravan CSV dataset, version 1.6.
 - Dataset source: https://zenodo.org/records/15530022
 - Documentation: https://github.com/kratzert/Caravan
@@ -36,12 +44,13 @@ Current Progress
 - Visualization completed: created discharge time-series plots and discharge-distribution plots for the selected basins.
 - Processed data available: saved the selected columns in data/processed/caravan_selected.csv for the training stage.
 
-- Next step: train a basic linear regression model using this processed data, then evaluate it on later dates. 
+- Initial training notebook available: fits a separate linear regression model for each basin and compares predictions with a persistence baseline. Saved notebook output and sample counts are present; the expected test_predictions.csv is currently absent from results/staged.
+- Next step: regenerate the prediction CSV and evaluate model accuracy on the later test dates.
 
 The time-series plots help identify changes in flow and sharp peaks. The distribution plots help examine how frequently low, moderate, and unusually high discharge values occur. Missing observations must be distinguished from genuine zero flow.
-Initial Training Plan
+Initial Training Setup
 
-We will train separate linear regression models for the three basins using the processed Caravan data. Seven input features will be constructed:
+The training notebook fits separate linear regression models for the three basins using the processed Caravan data. Seven input features are constructed:
 
 - Current day's discharge.
 - Discharge one and two days earlier.
