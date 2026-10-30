@@ -21,3 +21,5 @@ Each basin file has 26,662 daily rows and 41 columns, covering January 1, 1951 t
 The download code in [01_load_caravan_data.ipynb](../../caravan_dataset_analysis/01_load_caravan_data.ipynb) retrieves these five files from the Caravan CSV archive linked in that notebook. It skips files that are already present. The project uses Caravan version 1.6.
 
 The same notebook reads the three daily files, selects the variables needed for this experiment, and writes a combined table to [data/processed](../processed/README.md). Selection and later cleaning happen outside this folder; the original files stay available for reference.
+
+The separate [noaa_storm_events](noaa_storm_events/README.md) subfolder holds supplemental NOAA flood reports used to cross-check high-flow dates. Those reports are not part of the Caravan source files.

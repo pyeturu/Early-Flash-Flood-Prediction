@@ -18,6 +18,7 @@ Folder documentation
 - [Results](results/README.md): the analysis workflow and the outputs currently available.
 - [Analysis and training outputs](results/staged/README.md): statistics, missing values, sample counts, and expected prediction output.
 - [Figures](results/staged/figures/README.md): what each plot shows and how to regenerate it.
+- [NOAA flood-date comparison](results/noaa_crosscheck/README.md): reported county floods compared with observed high-flow days. Run [04_crosscheck_noaa_floods.ipynb](caravan_dataset_analysis/04_crosscheck_noaa_floods.ipynb) to inspect dates and narratives; these are county matches, not verified basin flood labels.
 
 We use a three-basin CAMELS-US subset of the Caravan CSV dataset, version 1.6.
 - Dataset source: https://zenodo.org/records/15530022

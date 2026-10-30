@@ -1,0 +1,4 @@
+basin,county,threshold_mm_day,county_flood_records,county_flash_flood_records,records_with_observed_discharge,records_with_same_date_high_flow,records_with_high_flow_within_one_day,records_naming_river,observed_days,high_flow_days,high_flow_days_with_county_report,high_flow_days_without_county_report,county_report_days_with_flow_below_threshold,county_report_days_without_discharge
+camels_01411300,"Cape May County, NJ",3.07,5,11,15,6,6,0,6686,348,5,343,11,1
+camels_05495500,"Adams County, IL",3.4654999999999836,7,15,22,16,17,1,6909,326,34,292,75,0
+camels_14182500,"Marion County, OR",18.547999999999956,17,0,17,16,17,0,6867,378,31,347,10,0

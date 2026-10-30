@@ -1,6 +1,6 @@
 # Results
 
-This folder collects the outputs of our initial river discharge analysis. The files currently sit in [staged](staged/README.md), with the saved plots in [staged/figures](staged/figures/README.md).
+This folder collects the outputs of our initial river discharge analysis. Exploration and training outputs sit in [staged](staged/README.md), with their plots in [staged/figures](staged/figures/README.md). The supplemental [NOAA flood-date comparison](noaa_crosscheck/README.md) has its own folder.
 
 The work starts with three Caravan basins. We select discharge, precipitation, and mean temperature, then inspect the 1990–2014 study period for missing observations, differences in flow, and unusually high discharge. The training notebook builds a separate linear regression model for each river to predict the next day's discharge.
 
@@ -10,6 +10,7 @@ The work starts with three Caravan basins. We select discharge, precipitation, a
 - **Missing-value CSVs:** counts of unavailable observations in those three variables.
 - **`sample_counts.csv`:** the number of features and usable training and test samples for each basin.
 - **Figures:** a daily discharge plot and a discharge histogram for each river, six PNGs in total.
+- **NOAA cross-check:** county flood reports matched against observed high-flow dates, with daily and event-level tables and a combined three-basin plot. See [the comparison README](noaa_crosscheck/README.md) for the limits of county matching.
 
 The training notebook contains saved prediction output, but its expected `test_predictions.csv` is absent from this folder. There are also no saved model accuracy metrics here, so the existing files do not establish whether linear regression beats the baseline.
 
